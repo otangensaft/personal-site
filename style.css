@@ -1,0 +1,580 @@
+/* ═══════════════════════════════════════════════
+   Personal Site — Architectural Edition
+   style.css
+═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@100;200;300&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
+
+/* ── Tokens ── */
+:root {
+  --parchment:    #F2EDE4;
+  --parchment-dk: #EDE6DA;
+  --ink:          #1A1510;
+  --ink-mid:      #2E2318;
+  --ink-lt:       #3A2A18;
+  --stone:        #4A3A28;
+  --gold:         #D4B896;
+  --gold-dim:     #B8A888;
+  --gold-faint:   #C8B898;
+  --warm-mid:     #8B6E4E;
+  --warm-lt:      #7A6A55;
+  --warm-muted:   #6B5438;
+  --warm-ghost:   #5A4830;
+  --warm-pale:    #4A3018;
+  --text-body:    #3A2E20;
+  --border-lt:    #D4C8B4;
+  --border-pale:  #C8B898;
+  --surface-card: #EDE6DA;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--parchment);
+  color: var(--ink);
+  font-family: 'Libre Baskerville', serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Navigation ── */
+nav {
+  background: var(--ink);
+  padding: 0 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--warm-lt);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border-left: 1px solid var(--ink-mid);
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+  background: #22190F;
+}
+
+/* ── Hero ── */
+.hero {
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Colonnade */
+.colonnade {
+  display: flex;
+  height: 80px;
+  border-bottom: 1px solid var(--ink-mid);
+}
+
+.column-bay {
+  flex: 1;
+  border-right: 1px solid var(--ink-mid);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.column-bay:last-child { border-right: none; }
+
+.arch {
+  width: 100%;
+  height: 52px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.arch svg { width: 100%; height: 100%; }
+
+.column-shaft {
+  width: 1px;
+  height: 20px;
+  background: var(--ink-mid);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+/* Hero body */
+.hero-body {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  min-height: 400px;
+}
+
+.hero-left {
+  padding: 60px 56px;
+  border-right: 1px solid var(--ink-mid);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Grid overlay */
+.hero-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#2A1E12 1px, transparent 1px),
+    linear-gradient(90deg, #2A1E12 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 9px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.eyebrow-rule {
+  height: 1px;
+  width: 32px;
+  background: var(--ink-lt);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #E8DCC8;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-sub-ital {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--warm-muted);
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.hero-desc {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  line-height: 2;
+  color: var(--warm-ghost);
+  max-width: 400px;
+  position: relative;
+}
+
+.hero-right {
+  background: #130F09;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.arch-diagram {
+  width: 180px;
+  max-height: 320px;
+}
+
+/* ── Sections ── */
+.section-wrap {
+  padding: 72px 56px;
+  border-bottom: 1px solid var(--border-lt);
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+  gap: 0;
+}
+
+.section-num {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--gold-dim);
+  border: 1px solid var(--border-pale);
+  padding: 6px 14px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--ink);
+  flex: 1;
+}
+
+.section-end-mark {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--border-pale);
+}
+
+/* ── Work cards ── */
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border-pale);
+  border: 1px solid var(--border-pale);
+  margin-bottom: 1px;
+}
+
+.work-card {
+  display: block;
+  background: var(--parchment);
+  padding: 32px 28px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+
+.work-card:hover { background: var(--parchment-dk); }
+
+.card-number {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: var(--border-pale);
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.card-desc {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+  color: var(--warm-lt);
+}
+
+.card-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  background: var(--surface-card);
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--border-pale);
+  border-left: 1px solid var(--border-pale);
+}
+
+.work-card-wide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--parchment);
+  border: 1px solid var(--border-pale);
+  border-top: none;
+  padding: 24px 32px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.25s;
+}
+
+.work-card-wide:hover { background: var(--parchment-dk); }
+
+.wide-left {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.wide-num {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: var(--border-pale);
+  flex-shrink: 0;
+}
+
+.wide-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.wide-sub {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--warm-lt);
+}
+
+.wide-right {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  flex-shrink: 0;
+}
+
+.wide-arrow {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  color: var(--border-pale);
+  transition: transform 0.2s, color 0.2s;
+}
+
+.work-card-wide:hover .wide-arrow {
+  transform: translateX(6px);
+  color: var(--ink);
+}
+
+/* ── About ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  line-height: 2.1;
+  color: var(--text-body);
+}
+
+.about-text em { font-style: italic; color: var(--warm-mid); }
+
+.blueprint-panel {
+  border: 1px solid var(--border-pale);
+  padding: 24px 20px;
+  background: var(--surface-card);
+}
+
+.blueprint-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 8px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.bp-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-lt);
+}
+
+.bp-line:last-child { border-bottom: none; }
+
+.bp-key {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--warm-lt);
+}
+
+.bp-val {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 11px;
+  color: var(--text-body);
+}
+
+/* ── Contact ── */
+.contact-text {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--text-body);
+}
+
+.contact-text a {
+  color: var(--warm-mid);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-pale);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-text a:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--ink);
+  border-top: 1px solid var(--ink-mid);
+}
+
+.footer-top {
+  display: flex;
+  border-bottom: 1px solid var(--ink-mid);
+}
+
+.footer-col {
+  flex: 1;
+  border-right: 1px solid var(--ink-mid);
+  padding: 32px 32px;
+}
+
+.footer-col:last-child { border-right: none; }
+
+.footer-col-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 8px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--ink-lt);
+  margin-bottom: 14px;
+}
+
+.footer-col a,
+.footer-col p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--warm-pale);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy,
+.footer-mark {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: var(--ink-mid);
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  nav { padding: 0 24px; }
+
+  .hero-body {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-right { display: none; }
+  .hero-left { padding: 48px 24px; }
+  h1 { font-size: 36px; }
+
+  .colonnade { display: none; }
+  .section-wrap { padding: 48px 24px; }
+
+  .work-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+
+  .footer-top { flex-direction: column; }
+  .footer-col { border-right: none; border-bottom: 1px solid var(--ink-mid); padding: 24px; }
+  .footer-col:last-child { border-bottom: none; }
+  .footer-bottom { padding: 16px 24px; }
+}
