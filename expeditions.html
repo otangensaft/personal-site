@@ -10,113 +10,146 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="expeditions-page">
   <nav>
     <a href="index.html" class="nav-logo">Danny Tang</a>
     <div class="nav-links">
       <a href="index.html#interests">Back Home</a>
-      <a href="#completed">Completed</a>
-      <a href="#up-next">Up Next</a>
+      <a href="#road-to-el-cap">Epic Arc</a>
+      <a href="#other-trips">Other Trips</a>
     </div>
   </nav>
 
   <section class="expedition-hero">
     <div class="expedition-hero-inner">
-      <p class="expedition-eyebrow">Expeditions</p>
-      <h1>Road to El Cap</h1>
+      <h1 class="expedition-title">Expeditions</h1>
       <p class="hero-sub-ital">Featuring Danny, Alex, Connor, and Evelyn</p>
     </div>
   </section>
 
-  <main class="section-wrap" id="completed">
+  <main class="section-wrap road-epic" id="road-to-el-cap">
     <div class="section-head">
       <span class="section-num">I</span>
-      <span class="section-title">Completed</span>
-      <span class="section-end-mark">2022 – 2025</span>
+      <span class="section-title">Road to El Cap</span>
+      <span class="section-end-mark">Epic Arc</span>
     </div>
 
-    <p class="about-text" style="margin-bottom: 1.5em;">A running log of big routes completed and what's next, shown as a clean timeline.</p>
+    <p class="about-text" style="margin-bottom: 1.5em;">A split timeline arc: climbing milestones on one side, other expedition travel on the other.</p>
     <p class="about-text" style="margin-bottom: 1.5em;">Dates come from route subpages where they are published.</p>
 
-    <div class="timeline">
-      <article class="timeline-year">
-        <h3 class="timeline-year-label">2025</h3>
-        <ul class="timeline-items">
-          <li><span class="route-name">Long Time No See</span><span class="route-date">Date TBD</span></li>
-          <li class="timeline-route">
-            <div class="route-row"><span class="route-name">JFMR</span><span class="route-date">Date TBD</span></div>
-            <figure class="route-photo">
-              <img src="images/expeditions/jfmr.jpeg" alt="JFMR expedition photo" loading="lazy" />
-            </figure>
-          </li>
-          <li><span class="route-name">Rock On &amp; Butt Lite (8)</span><span class="route-date">Date TBD</span></li>
-          <li class="timeline-route">
-            <div class="route-row"><span class="route-name">Cryptic &amp; SW Corner (7)</span><span class="route-date">Date TBD</span></div>
-            <figure class="route-photo">
-              <img src="images/expeditions/crypticsw-corner.png" alt="Cryptic and SW Corner expedition photo" loading="lazy" />
-            </figure>
+    <div class="epic-arc">
+      <section class="epic-lane" id="other-trips">
+        <p class="epic-label">Other Trips (Non-Climbing)</p>
+        <ul class="timeline-items timeline-items-next trip-items">
+          <li class="timeline-dynamic-item" data-start-date="2026-05-18" data-end-date="2026-05-31">
+            <span class="route-date">May 18-31 2026</span>
+            <span class="route-name">Italy</span>
+            <span class="route-status" data-role="trip-status">Future</span>
           </li>
         </ul>
-      </article>
+      </section>
 
-      <article class="timeline-year">
-        <h3 class="timeline-year-label">2024</h3>
-        <ul class="timeline-items">
-          <li><span class="route-name">El Sendero Diablo (6)</span><span class="route-date">Mar 16, 2024</span></li>
-          <li><span class="route-name">Central Pillars of Frenzy (5)</span><span class="route-date">Jun 1, 2024</span></li>
-          <li><span class="route-name">East Butt of Mid (6)</span><span class="route-date">Sep 28, 2024</span></li>
-          <li><span class="route-name">Dream of Wild Turkeys (9)</span><span class="route-date">Oct 20, 2024</span></li>
-          <li class="timeline-route">
-            <div class="route-row"><span class="route-name">The Long Climb (9)</span><span class="route-date">Dec 23, 2024</span></div>
-            <figure class="route-photo">
-              <img src="images/expeditions/the-long-climb.jpeg" alt="The Long Climb expedition photo" loading="lazy" />
-            </figure>
-          </li>
-          <li class="timeline-route">
-            <div class="route-row"><span class="route-name">Community Pillar</span><span class="route-date">Date TBD</span></div>
-            <figure class="route-photo">
-              <img src="images/expeditions/community-pillar.jpeg" alt="Community Pillar expedition photo" loading="lazy" />
-            </figure>
-          </li>
-          <li><span class="route-name">La Petite Grepon (7)</span><span class="route-date">Date TBD</span></li>
-        </ul>
-      </article>
+      <section class="epic-lane">
+        <p class="epic-label">Climbing Milestones</p>
+        <div class="timeline">
+          <article class="timeline-year">
+            <h3 class="timeline-year-label">2026</h3>
+            <ul class="timeline-items">
+              <li><span class="route-name">Epinephrine</span><span class="route-date">Jan 17, 2026</span></li>
+            </ul>
+          </article>
 
-      <article class="timeline-year">
-        <h3 class="timeline-year-label">2023</h3>
-        <ul class="timeline-items">
-          <li><span class="route-name">After 6 &amp; Sunnyside Bench (6)</span><span class="route-date">Nov 25, 2023</span></li>
-          <li><span class="route-name">Skywalker &amp; Spirit of Squamish (9)</span><span class="route-date">Date TBD</span></li>
-        </ul>
-      </article>
+          <article class="timeline-year">
+            <h3 class="timeline-year-label">2025</h3>
+            <ul class="timeline-items">
+              <li><span class="route-name">Long Time No See</span><span class="route-date">Date TBD</span></li>
+              <li class="timeline-route">
+                <div class="route-row"><span class="route-name">JFMR</span><span class="route-date">Date TBD</span></div>
+                <figure class="route-photo">
+                  <img src="images/expeditions/date-tbd-jfmr/cover.jpeg" alt="JFMR expedition photo" loading="lazy" />
+                </figure>
+              </li>
+              <li><span class="route-name">Rock On &amp; Butt Lite (8)</span><span class="route-date">Date TBD</span></li>
+              <li class="timeline-route">
+                <div class="route-row"><span class="route-name">Cryptic &amp; SW Corner (7)</span><span class="route-date">Date TBD</span></div>
+                <figure class="route-photo">
+                  <img src="images/expeditions/date-tbd-cryptic-sw-corner/cover.png" alt="Cryptic and SW Corner expedition photo" loading="lazy" />
+                </figure>
+              </li>
+            </ul>
+          </article>
 
-      <article class="timeline-year">
-        <h3 class="timeline-year-label">2022</h3>
-        <ul class="timeline-items">
-          <li><span class="route-name">Left Ski Track (2)</span><span class="route-date">Date TBD</span></li>
-        </ul>
-      </article>
+          <article class="timeline-year">
+            <h3 class="timeline-year-label">2024</h3>
+            <ul class="timeline-items">
+              <li><span class="route-name">El Sendero Diablo (6)</span><span class="route-date">Mar 16, 2024</span></li>
+              <li><span class="route-name">Central Pillars of Frenzy (5)</span><span class="route-date">Jun 1, 2024</span></li>
+              <li><span class="route-name">East Butt of Mid (6)</span><span class="route-date">Sep 28, 2024</span></li>
+              <li><span class="route-name">Dream of Wild Turkeys (9)</span><span class="route-date">Oct 20, 2024</span></li>
+              <li class="timeline-route">
+                <div class="route-row"><span class="route-name">The Long Climb (9)</span><span class="route-date">Dec 23, 2024</span></div>
+                <figure class="route-photo">
+                  <img src="images/expeditions/20241223-the-long-climb/cover.jpeg" alt="The Long Climb expedition photo" loading="lazy" />
+                </figure>
+              </li>
+              <li class="timeline-route">
+                <div class="route-row"><span class="route-name">Community Pillar</span><span class="route-date">Date TBD</span></div>
+                <figure class="route-photo">
+                  <img src="images/expeditions/date-tbd-community-pillar/cover.jpeg" alt="Community Pillar expedition photo" loading="lazy" />
+                </figure>
+              </li>
+              <li><span class="route-name">La Petite Grepon (7)</span><span class="route-date">Date TBD</span></li>
+            </ul>
+          </article>
+
+          <article class="timeline-year">
+            <h3 class="timeline-year-label">2023</h3>
+            <ul class="timeline-items">
+              <li><span class="route-name">After 6 &amp; Sunnyside Bench (6)</span><span class="route-date">Nov 25, 2023</span></li>
+              <li><span class="route-name">Skywalker &amp; Spirit of Squamish (9)</span><span class="route-date">Date TBD</span></li>
+            </ul>
+          </article>
+
+          <article class="timeline-year">
+            <h3 class="timeline-year-label">2022</h3>
+            <ul class="timeline-items">
+              <li><span class="route-name">Left Ski Track (2)</span><span class="route-date">Date TBD</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
     </div>
   </main>
 
-  <section class="section-wrap" id="up-next">
-    <div class="section-head">
-      <span class="section-num">II</span>
-      <span class="section-title">Up Next</span>
-      <span class="section-end-mark">2026 Focus</span>
-    </div>
+  <script>
+    (function updateTimelineStatus() {
+      const dynamicItems = document.querySelectorAll(".timeline-dynamic-item[data-start-date][data-end-date]");
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
 
-    <ul class="timeline-items timeline-items-next">
-      <li>War on Half Dome</li>
-      <li>Serenity Crack</li>
-      <li>Up to Boot Flake on the Nose</li>
-      <li>NE Buttress of Higher Cathedral</li>
-      <li>RNW of Half Dome</li>
-      <li>Nightcrawler</li>
-      <li>Fiddler on the Roof</li>
-      <li>Epinephrine</li>
-      <li>The Nose / El Cap</li>
-    </ul>
-  </section>
+      dynamicItems.forEach((item) => {
+        const status = item.querySelector('[data-role="trip-status"]');
+        const start = new Date(item.dataset.startDate + "T00:00:00");
+        const end = new Date(item.dataset.endDate + "T23:59:59");
+
+        item.classList.remove("is-future", "is-current", "is-past");
+
+        if (today < start) {
+          item.classList.add("is-future");
+          if (status) status.textContent = "Future";
+          return;
+        }
+
+        if (today > end) {
+          item.classList.add("is-past");
+          if (status) status.textContent = "Past";
+          return;
+        }
+
+        item.classList.add("is-current");
+        if (status) status.textContent = "Current";
+      });
+    })();
+  </script>
 </body>
 </html>

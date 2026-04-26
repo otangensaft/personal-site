@@ -301,14 +301,51 @@ h1 em {
   max-width: 900px;
 }
 
-.expedition-eyebrow {
+.expedition-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.05;
+  color: #F4F4F4;
+  margin-bottom: 12px;
+}
+
+.expeditions-page .hero-sub-ital {
+  color: #DCDCDC;
+}
+
+.epic-label {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 10px;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #A0A0A0;
-  margin-bottom: 16px;
+  color: #222222;
+  margin-bottom: 14px;
+}
+
+.road-epic {
+  background: #FAFAFA;
+}
+
+.epic-arc {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+  margin-top: 18px;
+  padding-top: 26px;
+}
+
+.epic-lane {
+  background: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  padding: 18px 18px 14px;
+}
+
+.trip-items {
+  margin-top: 0;
 }
 
 /* Progressive color reveal while scrolling down */
@@ -666,11 +703,11 @@ h1 em {
 
 .timeline-year-label {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 200;
-  font-size: 11px;
+  font-weight: 300;
+  font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: #151515;
   margin-bottom: 10px;
 }
 
@@ -680,11 +717,11 @@ h1 em {
 
 .timeline-items li {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 200;
-  font-size: 11px;
+  font-weight: 400;
+  font-size: 13px;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  color: var(--text-body);
+  color: #111111;
   padding: 6px 0;
 }
 
@@ -697,21 +734,51 @@ h1 em {
 
 .route-name {
   display: block;
+  color: #111111;
+  font-weight: 400;
   order: 2;
 }
 
 .route-date {
-  font-size: 9px;
-  letter-spacing: 0.16em;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--warm-lt);
+  color: #1F1F1F;
   white-space: nowrap;
-  min-width: 90px;
+  min-width: 112px;
   order: 1;
 }
 
 .timeline-items-next {
   margin-top: 10px;
+}
+
+.timeline-dynamic-item .route-status {
+  margin-left: 6px;
+  border: 1px solid #5F5F5F;
+  padding: 1px 8px;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1F1F1F;
+}
+
+.timeline-dynamic-item.is-past .route-status {
+  opacity: 0.75;
+}
+
+.timeline-dynamic-item.is-current .route-status {
+  border-color: var(--ink-mid);
+  color: var(--ink);
+  animation: timeline-blink 1s steps(2, start) infinite;
+}
+
+@keyframes timeline-blink {
+  50% {
+    opacity: 0.25;
+  }
 }
 
 .timeline-route {
@@ -821,6 +888,7 @@ footer {
   .hero-right { display: none; }
   .hero-left { padding: 48px 24px; }
   h1 { font-size: 36px; }
+  .expedition-title { font-size: 44px; }
   .colonnade-topic {
     min-height: 36px;
     font-size: 7px;
@@ -836,6 +904,10 @@ footer {
   .about-grid { grid-template-columns: 1fr; }
   .timeline { padding-left: 20px; }
   .timeline-year::before { left: -16px; }
+  .epic-arc {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 
   .footer-top { flex-direction: column; }
   .footer-col { border-right: none; border-bottom: 1px solid #2E2E2E; padding: 24px; }

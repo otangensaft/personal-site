@@ -1,9 +1,12 @@
-Place expedition photos in this folder to show them on `expeditions.html`.
+Place expedition photos in expedition-specific folders to show them on `expeditions.html`.
 
-Expected filenames:
-- `elcap-1.jpg`
-- `elcap-2.jpg`
-- `elcap-3.jpg`
-- `elcap-4.jpg`
+Folder naming convention:
+- `<YYYYMMDD>-<expedition-name>` when the start date is known
+- `date-tbd-<expedition-name>` when the date is still unknown
 
-You can also use `.png` or `.webp` by updating the paths in `expeditions.html`.
+Image naming convention inside each folder:
+- `cover.jpg` (or `cover.jpeg`, `cover.png`, `cover.webp`)
+
+Examples:
+- `20241223-the-long-climb/cover.jpeg`
+- `date-tbd-community-pillar/cover.jpeg`
