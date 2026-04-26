@@ -314,6 +314,53 @@ h1 em {
   color: #DCDCDC;
 }
 
+.bucket-list {
+  margin-top: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.bucket-list-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.bucket-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+}
+
+.bucket-list ul li {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #AAAAAA;
+  padding-left: 14px;
+  position: relative;
+}
+
+.bucket-list ul li::before {
+  content: '○';
+  position: absolute;
+  left: 0;
+  color: #555;
+  font-size: 9px;
+  top: 1px;
+}
+
 .epic-label {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
@@ -815,6 +862,349 @@ h1 em {
   top: 22px;
   width: 14px;
   border-top: 1px solid var(--border-pale);
+}
+
+/* ── Road to El Cap layout ── */
+.road-epic-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+  max-width: 740px;
+}
+
+.road-epic-main {
+  min-width: 0;
+}
+
+/* ── Sidenav ── */
+.timeline-sidenav {
+  position: sticky;
+  top: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 48px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  height: auto;
+}
+
+.tsn-heading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #AAAAAA;
+  margin-bottom: 2px;
+}
+
+.tsn-link {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #BBBBBB;
+  text-decoration: none;
+  transition: color 0.15s;
+  display: block;
+}
+
+.tsn-link:hover { color: #333; }
+.tsn-link.is-active { color: #111; }
+
+.tsn-bucket {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tsn-bucket-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #BBBBBB;
+  margin: 0 0 10px;
+}
+
+.tsn-bucket ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tsn-bucket ul li {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #CCCCCC;
+  padding-left: 10px;
+  position: relative;
+}
+
+.tsn-bucket ul li::before {
+  content: '○';
+  position: absolute;
+  left: 0;
+  color: #DDDDDD;
+  font-size: 7px;
+  top: 1px;
+}
+
+/* ── Dual Timeline ── */
+.dt-col-headers {
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr;
+  margin-bottom: 12px;
+}
+
+.dt-col-header {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #AAAAAA;
+}
+
+.dt-col-header--left  { text-align: right; padding-right: 18px; }
+.dt-col-header--right { text-align: left;  padding-left:  18px; }
+
+.dual-timeline {
+  position: relative;
+  width: 100%;
+  padding: 4px 0 12px;
+}
+
+.dual-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  background: #E0E0E0;
+  z-index: 0;
+}
+
+.dt-row,
+.dt-section-row,
+.dt-now-row {
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr;
+  position: relative;
+  z-index: 1;
+}
+
+.dt-cell--left {
+  padding-right: 18px;
+  text-align: right;
+}
+
+.dt-cell--right {
+  padding-left: 18px;
+  text-align: left;
+}
+
+.dt-node {
+  display: flex;
+  justify-content: center;
+  padding-top: 13px;
+}
+
+.dt-node::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border: 1px solid #C4C4C4;
+  background: #FAFAFA;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dt-entry {
+  padding: 8px 0;
+}
+
+.dt-entry-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.07em;
+  color: #111111;
+  display: block;
+  line-height: 1.5;
+}
+
+.dt-entry-date {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333333;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* Year markers — flex so badge never overflows */
+.dt-year-row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin: 22px 0 6px;
+}
+
+.dt-year-badge {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #2A2A2A;
+  background: #FAFAFA;
+  border: 1px solid #CCCCCC;
+  padding: 3px 10px;
+  line-height: 1.6;
+}
+
+/* Road to El Cap section label */
+.dt-section-row {
+  margin: 12px 0 2px;
+}
+
+.dt-section-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #888888;
+  padding-left: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #E8E8E8;
+  margin: 0;
+  display: block;
+}
+
+/* Now pin */
+.dt-now-row {
+  margin: 10px 0;
+  align-items: center;
+}
+
+.dt-now-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #AAAAAA;
+  text-align: right;
+  padding-right: 14px;
+}
+
+.dt-now-date {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333333;
+  padding-left: 18px;
+  align-self: center;
+}
+
+.dt-now-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-now-dot {
+  width: 10px;
+  height: 10px;
+  background: #1A1A1A;
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+  animation: now-pulse 2.4s ease-out infinite;
+}
+
+@keyframes now-pulse {
+  0%   { box-shadow: 0 0 0 0    rgba(26, 26, 26, 0.5); }
+  65%  { box-shadow: 0 0 0 8px  rgba(26, 26, 26, 0); }
+  100% { box-shadow: 0 0 0 0    rgba(26, 26, 26, 0); }
+}
+
+/* Trip status badge */
+.dt-trip-status {
+  display: inline-block;
+  border: 1px solid #BBBBBB;
+  padding: 1px 7px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #555555;
+  margin-top: 4px;
+}
+
+.timeline-dynamic-item.is-current .dt-trip-status {
+  border-color: #111;
+  color: #111;
+  animation: timeline-blink 1s steps(2, start) infinite;
+}
+
+/* Photos inside dual-timeline */
+.dt-route-photo {
+  margin-top: 8px;
+  overflow: hidden;
+  max-width: 210px;
+  display: block;
+}
+
+.dt-route-photo img {
+  width: 100%;
+  max-height: 145px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .road-epic-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-sidenav { display: none; }
+
+  .dual-timeline::before { left: 16px; transform: none; }
+
+  .dt-row,
+  .dt-section-row,
+  .dt-col-headers,
+  .dt-now-row {
+    grid-template-columns: 0 24px 1fr;
+  }
+
+  .dt-cell--left,
+  .dt-col-header--left,
+  .dt-now-label {
+    display: none;
+  }
 }
 
 /* ── Footer ── */

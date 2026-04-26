@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Expeditions | Danny Tang</title>
-  <meta name="description" content="Road to El Cap progress log and upcoming objectives." />
+  <meta name="description" content="Climbing milestones and expedition travel log." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet" />
@@ -15,140 +15,1202 @@
     <a href="index.html" class="nav-logo">Danny Tang</a>
     <div class="nav-links">
       <a href="index.html#interests">Back Home</a>
-      <a href="#road-to-el-cap">Epic Arc</a>
-      <a href="#other-trips">Other Trips</a>
+      <a href="#unified-timeline">Timeline</a>
     </div>
   </nav>
 
   <section class="expedition-hero">
     <div class="expedition-hero-inner">
       <h1 class="expedition-title">Expeditions</h1>
-      <p class="hero-sub-ital">Featuring Danny, Alex, Connor, and Evelyn</p>
     </div>
   </section>
 
   <main class="section-wrap road-epic" id="road-to-el-cap">
-    <div class="section-head">
-      <span class="section-num">I</span>
-      <span class="section-title">Road to El Cap</span>
-      <span class="section-end-mark">Epic Arc</span>
-    </div>
+    <div class="road-epic-layout">
 
-    <p class="about-text" style="margin-bottom: 1.5em;">A split timeline arc: climbing milestones on one side, other expedition travel on the other.</p>
-    <p class="about-text" style="margin-bottom: 1.5em;">Dates come from route subpages where they are published.</p>
+      <div class="road-epic-main">
+        <div class="dt-col-headers">
+          <div class="dt-col-header dt-col-header--left">Moments</div>
+          <div></div>
+          <div class="dt-col-header dt-col-header--right">Expeditions</div>
+        </div>
 
-    <div class="epic-arc">
-      <section class="epic-lane" id="other-trips">
-        <p class="epic-label">Other Trips (Non-Climbing)</p>
-        <ul class="timeline-items timeline-items-next trip-items">
-          <li class="timeline-dynamic-item" data-start-date="2026-05-18" data-end-date="2026-05-31">
-            <span class="route-date">May 18-31 2026</span>
-            <span class="route-name">Italy</span>
-            <span class="route-status" data-role="trip-status">Future</span>
-          </li>
-        </ul>
-      </section>
+        <div class="dual-timeline" id="unified-timeline">
 
-      <section class="epic-lane">
-        <p class="epic-label">Climbing Milestones</p>
-        <div class="timeline">
-          <article class="timeline-year">
-            <h3 class="timeline-year-label">2026</h3>
-            <ul class="timeline-items">
-              <li><span class="route-name">Epinephrine</span><span class="route-date">Jan 17, 2026</span></li>
-            </ul>
-          </article>
+          <!-- 2026 ── year marker -->
+          <div class="dt-year-row" id="tl-2026" data-year="2026">
+            <div class="dt-year-badge">2026</div>
+          </div>
 
-          <article class="timeline-year">
-            <h3 class="timeline-year-label">2025</h3>
-            <ul class="timeline-items">
-              <li><span class="route-name">Long Time No See</span><span class="route-date">Date TBD</span></li>
-              <li class="timeline-route">
-                <div class="route-row"><span class="route-name">JFMR</span><span class="route-date">Date TBD</span></div>
-                <figure class="route-photo">
-                  <img src="images/expeditions/date-tbd-jfmr/cover.jpeg" alt="JFMR expedition photo" loading="lazy" />
+          <!-- Patagonia (farthest future) -->
+          <div class="dt-row timeline-dynamic-item" data-start-date="2026-12-20" data-end-date="2026-12-31">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Patagonia (Fitz Roy)</span>
+                <span class="dt-entry-date">Late Dec 2026</span>
+                <span class="dt-trip-status" data-role="trip-status">Future</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Japan -->
+          <div class="dt-row timeline-dynamic-item" data-start-date="2026-08-20" data-end-date="2026-08-31">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Japan</span>
+                <span class="dt-entry-date">Late Aug 2026</span>
+                <span class="dt-trip-status" data-role="trip-status">Future</span>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Mt. Whitney -->
+          <div class="dt-row timeline-dynamic-item" data-start-date="2026-08-07" data-end-date="2026-08-09">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Mt. Whitney</span>
+                <span class="dt-entry-date">Aug 7–9, 2026</span>
+                <span class="dt-trip-status" data-role="trip-status">Future</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Italy (closest upcoming) -->
+          <div class="dt-row timeline-dynamic-item" data-start-date="2026-05-18" data-end-date="2026-05-31">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Italy</span>
+                <span class="dt-entry-date">May 18–31, 2026</span>
+                <span class="dt-trip-status" data-role="trip-status">Future</span>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- NOW pin -->
+          <div class="dt-now-row" id="timeline-now-pin">
+            <div class="dt-now-label">Today</div>
+            <div class="dt-now-center"><span class="timeline-now-dot"></span></div>
+            <div class="dt-now-date"><span id="today-date"></span></div>
+          </div>
+
+          <!-- Epinephrine -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Jan 17, 2026</span>
+                <span class="dt-entry-name">Epinephrine (10)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20260117-epinephrine/IMG_0714.jpg" alt="Epinephrine expedition photo" loading="lazy" />
                 </figure>
-              </li>
-              <li><span class="route-name">Rock On &amp; Butt Lite (8)</span><span class="route-date">Date TBD</span></li>
-              <li class="timeline-route">
-                <div class="route-row"><span class="route-name">Cryptic &amp; SW Corner (7)</span><span class="route-date">Date TBD</span></div>
-                <figure class="route-photo">
-                  <img src="images/expeditions/date-tbd-cryptic-sw-corner/cover.png" alt="Cryptic and SW Corner expedition photo" loading="lazy" />
-                </figure>
-              </li>
-            </ul>
-          </article>
+              </div>
+            </div>
+          </div>
 
-          <article class="timeline-year">
-            <h3 class="timeline-year-label">2024</h3>
-            <ul class="timeline-items">
-              <li><span class="route-name">El Sendero Diablo (6)</span><span class="route-date">Mar 16, 2024</span></li>
-              <li><span class="route-name">Central Pillars of Frenzy (5)</span><span class="route-date">Jun 1, 2024</span></li>
-              <li><span class="route-name">East Butt of Mid (6)</span><span class="route-date">Sep 28, 2024</span></li>
-              <li><span class="route-name">Dream of Wild Turkeys (9)</span><span class="route-date">Oct 20, 2024</span></li>
-              <li class="timeline-route">
-                <div class="route-row"><span class="route-name">The Long Climb (9)</span><span class="route-date">Dec 23, 2024</span></div>
-                <figure class="route-photo">
-                  <img src="images/expeditions/20241223-the-long-climb/cover.jpeg" alt="The Long Climb expedition photo" loading="lazy" />
+          <!-- 2025 ── year marker -->
+          <div class="dt-year-row" id="tl-2025" data-year="2025">
+            <div class="dt-year-badge">2025</div>
+          </div>
+
+          <!-- Rock On & Butt Lite -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Sep 1, 2025</span>
+                <span class="dt-entry-name">Rock On &amp; Butt Lite (8)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/date-tbd-rock-on-butt-lite/cover.jpg" alt="Rock On and Butt Lite expedition photo" loading="lazy" />
                 </figure>
-              </li>
-              <li class="timeline-route">
-                <div class="route-row"><span class="route-name">Community Pillar</span><span class="route-date">Date TBD</span></div>
-                <figure class="route-photo">
+              </div>
+            </div>
+          </div>
+
+          <!-- Long Time No See -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Aug 30, 2025</span>
+                <span class="dt-entry-name">Long Time No See</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250830-long-time-no-see/cover.jpeg" alt="Long Time No See expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Catalina -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Catalina</span>
+                <span class="dt-entry-date">Aug 23, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250823-catalina/cover.jpeg" alt="Catalina trip photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Yosemite -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Aug 1, 2025</span>
+                <span class="dt-entry-name">Yosemite</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250801-yosemite/cover.jpeg" alt="Yosemite expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Danny's Housewarming -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Housewarming</span>
+                <span class="dt-entry-date">Jul 26, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250726-housewarming/005748880026.JPEG" alt="Danny's Housewarming photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Red Rocks -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">May 16, 2025</span>
+                <span class="dt-entry-name">Red Rocks</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250516-red-rocks/cover.jpeg" alt="Red Rocks expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Oregon Roadtrip -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Oregon Roadtrip</span>
+                <span class="dt-entry-date">May 10–15, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250510-oregon-roadtrip/cover.jpeg" alt="Oregon Roadtrip photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Yosemite May -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">May 3, 2025</span>
+                <span class="dt-entry-name">Yosemite</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250503-yosemite/IMG_6485.jpg" alt="Yosemite expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Channel Islands -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Channel Islands</span>
+                <span class="dt-entry-date">Apr 4, 2025</span>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Community Pillar -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Mar 25, 2025</span>
+                <span class="dt-entry-name">Community Pillar (9)</span>
+                <figure class="dt-route-photo">
                   <img src="images/expeditions/date-tbd-community-pillar/cover.jpeg" alt="Community Pillar expedition photo" loading="lazy" />
                 </figure>
-              </li>
-              <li><span class="route-name">La Petite Grepon (7)</span><span class="route-date">Date TBD</span></li>
-            </ul>
-          </article>
+              </div>
+            </div>
+          </div>
 
-          <article class="timeline-year">
-            <h3 class="timeline-year-label">2023</h3>
-            <ul class="timeline-items">
-              <li><span class="route-name">After 6 &amp; Sunnyside Bench (6)</span><span class="route-date">Nov 25, 2023</span></li>
-              <li><span class="route-name">Skywalker &amp; Spirit of Squamish (9)</span><span class="route-date">Date TBD</span></li>
-            </ul>
-          </article>
+          <!-- JFMR -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">March 23, 2025</span>
+                <span class="dt-entry-name">JFMR (8)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250323-jfmr/cover.jpeg" alt="JFMR expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
 
-          <article class="timeline-year">
-            <h3 class="timeline-year-label">2022</h3>
-            <ul class="timeline-items">
-              <li><span class="route-name">Left Ski Track (2)</span><span class="route-date">Date TBD</span></li>
-            </ul>
-          </article>
-        </div>
-      </section>
-    </div>
+          <!-- Cryptic & SW Corner -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">March 15, 2025</span>
+                <span class="dt-entry-name">Cryptic &amp; SW Corner (7)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/date-tbd-cryptic-sw-corner/cover.png" alt="Cryptic and SW Corner expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Birthday Party -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Birthday Party</span>
+                <span class="dt-entry-date">Feb 28, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250228-birthday-party/IMG_5469.JPG" alt="Birthday Party photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Tahoe Yurt 2025 -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Tahoe Yurt</span>
+                <span class="dt-entry-date">Feb 23, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250223-tahoe-yurt/cover.jpeg" alt="Tahoe Yurt photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Big Bear -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Big Bear</span>
+                <span class="dt-entry-date">Feb 15, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250215-big-bear/cover.jpeg" alt="Big Bear photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Mammoth 2025 -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Mammoth</span>
+                <span class="dt-entry-date">Jan 25, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250125-mammoth/cover.jpeg" alt="Mammoth photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Spongebob's Crack -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Jan 20, 2025</span>
+                <span class="dt-entry-name">Spongebob's Crack</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250120-spongebobs-crack/cover.jpeg" alt="Spongebob's Crack expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bishop Peak -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Jan 17, 2025</span>
+                <span class="dt-entry-name">Bishop Peak</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250117-bishop-peak/cover.jpeg" alt="Bishop Peak expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mammoth Jan 2025 -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Mammoth</span>
+                <span class="dt-entry-date">Jan 4, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250104-mammoth/cover.jpeg" alt="Mammoth photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Utah Caves -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Utah Caves</span>
+                <span class="dt-entry-date">Jan 3, 2025</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20250103-utah-caves/cover.jpeg" alt="Utah Caves photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- 2024 ── year marker -->
+          <div class="dt-year-row" id="tl-2024" data-year="2024">
+            <div class="dt-year-badge">2024</div>
+          </div>
+
+          <!-- The Long Climb -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Dec 23, 2024</span>
+                <span class="dt-entry-name">The Long Climb (9)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20241223-the-long-climb/cover.jpeg" alt="The Long Climb expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pico de Orizaba -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Dec 2, 2024</span>
+                <span class="dt-entry-name">Pico de Orizaba</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20241202-pico-de-orizaba/cover.jpeg" alt="Pico de Orizaba expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dream of Wild Turkeys -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Oct 20, 2024</span>
+                <span class="dt-entry-name">Dream of Wild Turkeys (9)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20241020-dream-of-wild-turkeys/cover.webp" alt="Dream of Wild Turkeys expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Fortress -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Oct 5, 2024</span>
+                <span class="dt-entry-name">The Fortress</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20241005-the-fortress/cover.jpeg" alt="The Fortress expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- East Butt of Mid -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Sep 28, 2024</span>
+                <span class="dt-entry-name">East Butt of Mid (6)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- American Ninja Warrior Vegas -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">American Ninja Warrior Vegas</span>
+                <span class="dt-entry-date">Sep 23–25, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240923-anw-vegas/cover.jpeg" alt="American Ninja Warrior Vegas photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Dark Shadows -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Sep 22, 2024</span>
+                <span class="dt-entry-name">Dark Shadows (10)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240922-dark-shadows/cover.jpeg" alt="Dark Shadows expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Malibu -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Malibu</span>
+                <span class="dt-entry-date">Sep 13, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240913-malibu/cover.jpeg" alt="Malibu photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Friendsgiving -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Friendsgiving</span>
+                <span class="dt-entry-date">Sep 10, 2024</span>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Pear Buttress -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Sep 5, 2024</span>
+                <span class="dt-entry-name">Pear Buttress (6)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240905-pear-buttress/cover.jpeg" alt="Pear Buttress expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- La Petite Grepon -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Sep 3, 2024</span>
+                <span class="dt-entry-name">La Petite Grepon (7)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240903-la-petite-grepon/cover.jpeg" alt="La Petite Grepon expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bastille Crack -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Sep 1, 2024</span>
+                <span class="dt-entry-name">Bastille Crack (7)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240901-bastille-crack/cover.jpeg" alt="Bastille Crack expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- SF -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">SF</span>
+                <span class="dt-entry-date">Aug 18, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240818-sf/cover.jpeg" alt="SF photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Lizard's Mouth -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Jul 20, 2024</span>
+                <span class="dt-entry-name">Lizard's Mouth</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240720-lizards-mouth/cover.jpeg" alt="Lizard's Mouth expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glacier NP -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Glacier NP</span>
+                <span class="dt-entry-date">Jun 27, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240627-glacier-np/cover.jpeg" alt="Glacier NP photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Open Book -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Jun 15, 2024</span>
+                <span class="dt-entry-name">Open Book (5)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240615-open-book/cover.jpeg" alt="Open Book expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gridley -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Gridley</span>
+                <span class="dt-entry-date">Jun 8, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240608-gridley/cover.jpeg" alt="Gridley photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Central Pillars of Frenzy -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Jun 1, 2024</span>
+                <span class="dt-entry-name">Central Pillars of Frenzy (5)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240601-central-pillars-of-frenzy/cover.jpeg" alt="Central Pillars of Frenzy expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Holcomb -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">May 18, 2024</span>
+                <span class="dt-entry-name">Holcomb</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240518-holcomb/Screenshot 2026-04-26 at 4.02.47 PM.png" alt="Holcomb expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Whodunnit -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">May 4, 2024</span>
+                <span class="dt-entry-name">Whodunnit (10)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240504-whodunnit/cover.jpeg" alt="Whodunnit expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Royal Arches -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Apr 20, 2024</span>
+                <span class="dt-entry-name">Royal Arches (8)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240420-royal-arches/cover.jpeg" alt="Royal Arches expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Salt Lake City -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Salt Lake City</span>
+                <span class="dt-entry-date">Apr 14, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240414-salt-lake-city/cover.jpeg" alt="Salt Lake City photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Catan Night -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Catan Night</span>
+                <span class="dt-entry-date">Mar 31, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240331-catan-night/cover.jpeg" alt="Catan Night photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- El Sendero Diablo -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Mar 16, 2024</span>
+                <span class="dt-entry-name">El Sendero Diablo (6)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240316-el-sendero-diablo/cover.jpeg" alt="El Sendero Diablo expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dave's Deviation -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Date TBD</span>
+                <span class="dt-entry-name">Dave's Deviation (5)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Braille Book -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Date TBD</span>
+                <span class="dt-entry-name">Braille Book (6)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mammoth -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Mammoth</span>
+                <span class="dt-entry-date">Feb 24, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240224-mammoth/cover.jpeg" alt="Mammoth trip photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Tahoe Yurt -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Tahoe Yurt</span>
+                <span class="dt-entry-date">Feb 4, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20240204-tahoe-yurt/IMG_7111.JPG" alt="Tahoe Yurt trip photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- 2023 ── year marker -->
+          <div class="dt-year-row" id="tl-2023" data-year="2023">
+            <div class="dt-year-badge">2023</div>
+          </div>
+
+          <!-- Japan & Vietnam -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Japan &amp; Vietnam</span>
+                <span class="dt-entry-date">Dec 28, 2023 – Jan 15, 2024</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20231228-japan-vietnam/IMG_4663.JPG" alt="Japan and Vietnam trip photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- House Party -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">House Party</span>
+                <span class="dt-entry-date">Dec 16, 2023</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20231216-house-party/004962570030.JPG" alt="House Party photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- After 6 & Sunnyside Bench -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Nov 25, 2023</span>
+                <span class="dt-entry-name">After 6 &amp; Sunnyside Bench (6)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20231125-after-6-sunnyside-bench/cover.jpeg" alt="After 6 and Sunnyside Bench expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Crimson Chrysalis -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Oct 21, 2023</span>
+                <span class="dt-entry-name">Crimson Chrysalis (8)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20231021-crimson-chrysalis/cover.jpeg" alt="Crimson Chrysalis expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prep -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Prep</span>
+                <span class="dt-entry-date">Oct 17, 2023</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20231017-prep/IMG_3608.jpg" alt="Prep photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Gaviota -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Gaviota</span>
+                <span class="dt-entry-date">Oct 14, 2023</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20231014-gaviota/IMG_3530.jpg" alt="Gaviota photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Skywalker & Spirit of Squamish -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Sep 30, 2023</span>
+                <span class="dt-entry-name">Skywalker &amp; Spirit of Squamish (9)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20230930-skywalker-spirit-of-squamish/cover.jpeg" alt="Skywalker and Spirit of Squamish expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nutcracker -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Aug 6, 2023</span>
+                <span class="dt-entry-name">Nutcracker (7)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20230806-nutcracker/cover.jpeg" alt="Nutcracker expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Corrugation Corner -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Jul 1, 2023</span>
+                <span class="dt-entry-name">Corrugation Corner (9)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20230701-corrugation-corner/cover.jpeg" alt="Corrugation Corner expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Epinephrine 2023 -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">May 26, 2023</span>
+                <span class="dt-entry-name">Epinephrine (10)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frogland -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Apr 28, 2023</span>
+                <span class="dt-entry-name">Frogland (6)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20230428-frogland/cover.jpeg" alt="Frogland expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Space Boyz -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Date TBD</span>
+                <span class="dt-entry-name">Space Boyz (8)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2022 ── year marker -->
+          <div class="dt-year-row" id="tl-2022" data-year="2022">
+            <div class="dt-year-badge">2022</div>
+          </div>
+
+          <!-- Dappled Mare -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Nov 19, 2022</span>
+                <span class="dt-entry-name">Dappled Mare (5)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20221119-dappled-mare/IMG_7363.jpg" alt="Dappled Mare expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Corpse Wall -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Nov 5, 2022</span>
+                <span class="dt-entry-name">Corpse Wall</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20221105-corpse-wall/221105_Corpse_Wall-51.jpg" alt="Corpse Wall expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yosemite Oct 2022 -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Yosemite</span>
+                <span class="dt-entry-date">Oct 22, 2022</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20221022-yosemite/IMG_4176_Original.JPG" alt="Yosemite photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- The Apron -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Oct 21, 2022</span>
+                <span class="dt-entry-name">The Apron (1)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20221021-the-apron/cover.jpeg" alt="The Apron expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unimpeachable Groping -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Oct 14, 2022</span>
+                <span class="dt-entry-name">Unimpeachable Groping (7)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20221014-unimpeachable-groping/IMG_7725.jpg" alt="Unimpeachable Groping expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Ski Track -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Oct 8, 2022</span>
+                <span class="dt-entry-name">Left Ski Track (2)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20221008-left-ski-track/cover.jpeg" alt="Left Ski Track expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Europe -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Vienna · Munich · Innsbruck · Lauterbrunnen · Zurich</span>
+                <span class="dt-entry-date">Sep 14–26, 2022</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20220914-europe/IMG_7120.jpg" alt="Europe trip photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Boston -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left">
+              <div class="dt-entry">
+                <span class="dt-entry-name">Boston</span>
+                <span class="dt-entry-date">Sep 12–14, 2022</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20220912-boston/IMG_5598.jpg" alt="Boston trip photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right"></div>
+          </div>
+
+          <!-- Black Wall -->
+          <div class="dt-row">
+            <div class="dt-cell dt-cell--left"></div>
+            <div class="dt-node"></div>
+            <div class="dt-cell dt-cell--right">
+              <div class="dt-entry">
+                <span class="dt-entry-date">Jun 18, 2022</span>
+                <span class="dt-entry-name">Black Wall (3)</span>
+                <figure class="dt-route-photo">
+                  <img src="images/expeditions/20220618-black-wall/cover.jpeg" alt="Black Wall expedition photo" loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.dual-timeline -->
+      </div><!-- /.road-epic-main -->
+
+      <nav class="timeline-sidenav" aria-label="Jump to year">
+        <a href="#tl-2026" class="tsn-link" data-year="2026">MMXXVI</a>
+        <a href="#tl-2025" class="tsn-link" data-year="2025">MMXXV</a>
+        <a href="#tl-2024" class="tsn-link" data-year="2024">MMXXIV</a>
+        <a href="#tl-2023" class="tsn-link" data-year="2023">MMXXIII</a>
+        <a href="#tl-2022" class="tsn-link" data-year="2022">MMXXII</a>
+      </nav>
+
+    </div><!-- /.road-epic-layout -->
   </main>
 
   <script>
-    (function updateTimelineStatus() {
-      const dynamicItems = document.querySelectorAll(".timeline-dynamic-item[data-start-date][data-end-date]");
+    (function () {
       const today = new Date();
       today.setHours(0, 0, 0, 0);
 
-      dynamicItems.forEach((item) => {
-        const status = item.querySelector('[data-role="trip-status"]');
-        const start = new Date(item.dataset.startDate + "T00:00:00");
-        const end = new Date(item.dataset.endDate + "T23:59:59");
+      // Write today's date next to the now pin
+      const todayEl = document.getElementById("today-date");
+      if (todayEl) {
+        todayEl.textContent = today.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+      }
 
-        item.classList.remove("is-future", "is-current", "is-past");
+      // Status badges + hide past trip rows
+      document.querySelectorAll(".timeline-dynamic-item[data-start-date][data-end-date]").forEach((row) => {
+        const badge = row.querySelector('[data-role="trip-status"]');
+        const start = new Date(row.dataset.startDate + "T00:00:00");
+        const end   = new Date(row.dataset.endDate   + "T23:59:59");
+
+        row.classList.remove("is-future", "is-current", "is-past");
 
         if (today < start) {
-          item.classList.add("is-future");
-          if (status) status.textContent = "Future";
-          return;
+          row.classList.add("is-future");
+          const days = Math.ceil((start - today) / 86400000);
+          if (badge) badge.textContent = days === 1 ? "in 1 day" : `in ${days} days`;
+        } else if (today > end) {
+          row.classList.add("is-past");
+          row.hidden = true;
+        } else {
+          row.classList.add("is-current");
+          if (badge) badge.textContent = "Current";
         }
-
-        if (today > end) {
-          item.classList.add("is-past");
-          if (status) status.textContent = "Past";
-          return;
-        }
-
-        item.classList.add("is-current");
-        if (status) status.textContent = "Current";
       });
+
+      // Sidenav active-year highlight via IntersectionObserver
+      const navLinks = document.querySelectorAll(".tsn-link[data-year]");
+      if (navLinks.length && "IntersectionObserver" in window) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((l) => l.classList.remove("is-active"));
+              const link = document.querySelector(`.tsn-link[data-year="${entry.target.dataset.year}"]`);
+              if (link) link.classList.add("is-active");
+            }
+          });
+        }, { rootMargin: "-15% 0px -75% 0px" });
+
+        document.querySelectorAll(".dt-year-row[data-year]").forEach((row) => obs.observe(row));
+      }
     })();
   </script>
 </body>
