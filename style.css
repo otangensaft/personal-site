@@ -602,6 +602,21 @@ h1 em {
 }
 
 /* ── About ── */
+.about-topo {
+  background: #F4F0EA;
+}
+
+.topo-wrap {
+  width: 100%;
+  margin-top: 32px;
+}
+
+.topo-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 200px;
@@ -1335,9 +1350,79 @@ footer {
   color: #767676;
 }
 
+/* ── Hamburger toggle (hidden on desktop) ── */
+.nav-toggle {
+  display: none;
+}
+
 /* ── Responsive ── */
 @media (max-width: 700px) {
-  nav { padding: 0 24px; }
+  nav {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 56px;
+    align-items: center;
+  }
+
+  .nav-logo {
+    height: 56px;
+  }
+
+  /* Hamburger button */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--warm-lt);
+    transition: transform 0.2s, opacity 0.2s;
+    transform-origin: center;
+  }
+
+  /* Animate into X when open */
+  nav.nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  nav.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  nav.nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Nav links: hidden by default, dropdown when open */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid var(--ink-mid);
+  }
+  nav.nav-open .nav-links {
+    display: flex;
+  }
+  .nav-links a {
+    padding: 14px 20px;
+    border-left: none;
+    border-bottom: 1px solid var(--ink-mid);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+  }
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
 
   .hero-body {
     grid-template-columns: 1fr;

@@ -14,11 +14,15 @@
 
   <nav>
     <a href="/" class="nav-logo">Danny Tang</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <div class="nav-links">
       <a href="#interests">Interests</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
+      <a href="engineering.html">Engineering</a>
     </div>
   </nav>
 
@@ -60,7 +64,7 @@
             <path d="M10 48 L10 28 Q50 4 90 28 L90 48" fill="none" stroke="#2E2318" stroke-width="1"/>
           </svg>
         </div>
-        <button type="button" class="colonnade-topic">Engineering</button>
+        <a href="engineering.html" class="colonnade-topic">Engineering</a>
         <div class="column-shaft"></div>
       </div>
       <div class="column-bay">
@@ -143,34 +147,7 @@
     <div class="section-head">
       <span class="section-num">I</span>
       <span class="section-title">Selected Works</span>
-      <span class="section-end-mark">2024 – 2026</span>
     </div>
-    <div class="work-grid">
-      <a href="#" class="work-card">
-        <span class="card-tag">Writing</span>
-        <p class="card-number">01</p>
-        <h3 class="card-title">On the quiet hours</h3>
-        <p class="card-desc">An essay on solitude and the creative process, published in The Review.</p>
-      </a>
-      <a href="#" class="work-card">
-        <span class="card-tag">Music</span>
-        <p class="card-number">02</p>
-        <h3 class="card-title">Peripheral</h3>
-        <p class="card-desc">A 6-track EP recorded in winter. Ambient textures and layered voice.</p>
-      </a>
-    </div>
-    <a href="#" class="work-card-wide">
-      <div class="wide-left">
-        <span class="wide-num">03</span>
-        <div>
-          <div class="wide-title">Correspondence</div>
-          <div class="wide-sub">A year-long letter exchange turned into an illustrated book.</div>
-        </div>
-      </div>
-      <div class="wide-right">
-        <span class="wide-arrow">→</span>
-      </div>
-    </a>
   </section>
 
   <!-- ABOUT -->
@@ -178,35 +155,6 @@
     <div class="section-head">
       <span class="section-num">II</span>
       <span class="section-title">About</span>
-    </div>
-    <div class="about-grid">
-      <div>
-        <p class="about-text">
-          I'm drawn to the space between things — between silence and sound, between what's said and what's meant. Raised between coasts, my work carries the warmth of <em>California light</em> and the discipline of older forms. Structure and wildness in the same breath.
-        </p>
-        <p class="about-text" style="margin-top: 1.6em;">
-          Previously: some publication or band or thing. Currently working on something new, slowly, the way good things are made.
-        </p>
-      </div>
-      <div class="blueprint-panel">
-        <div class="blueprint-label">Field notes</div>
-        <div class="bp-line">
-          <span class="bp-key">Based</span>
-          <span class="bp-val">California</span>
-        </div>
-        <div class="bp-line">
-          <span class="bp-key">Medium</span>
-          <span class="bp-val">Many</span>
-        </div>
-        <div class="bp-line">
-          <span class="bp-key">Status</span>
-          <span class="bp-val">Open</span>
-        </div>
-        <div class="bp-line">
-          <span class="bp-key">Est.</span>
-          <span class="bp-val">MMXCII</span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -239,5 +187,6 @@
     </div>
   </footer>
 
+  <script src="nav.js"></script>
 </body>
 </html>
