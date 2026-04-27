@@ -1072,10 +1072,7 @@ h1 em {
   font-size: 10px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #2A2A2A;
-  background: #FAFAFA;
-  border: 1px solid #CCCCCC;
-  padding: 3px 10px;
+  color: #AAAAAA;
   line-height: 1.6;
 }
 
@@ -1176,6 +1173,10 @@ h1 em {
   display: block;
 }
 
+.dt-cell--left .dt-route-photo {
+  margin-left: auto;
+}
+
 .dt-route-photo img {
   width: 100%;
   max-height: 145px;
@@ -1183,28 +1184,95 @@ h1 em {
   display: block;
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 700px) {
   .road-epic-layout {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .timeline-sidenav { display: none; }
 
-  .dual-timeline::before { left: 16px; transform: none; }
+  /* Move spine to the left edge */
+  .dual-timeline::before {
+    left: 12px;
+    transform: none;
+  }
 
+  /* Every row becomes a plain flex row: [24px node] [content] */
   .dt-row,
   .dt-section-row,
-  .dt-col-headers,
-  .dt-now-row {
-    grid-template-columns: 0 24px 1fr;
+  .dt-now-row,
+  .dt-col-headers {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
+  /* Node: fixed 24px wide, centered over the spine — always first */
+  .dt-node {
+    flex: 0 0 24px;
+    padding-top: 13px;
+    order: 0;
+  }
+
+  /* Both cells collapse; only the one with content shows as a full-width block */
   .dt-cell--left,
-  .dt-col-header--left,
-  .dt-now-label {
+  .dt-cell--right {
     display: none;
   }
+
+  /* Whichever cell has an entry gets shown, full-width, left-aligned, after the node */
+  .dt-cell--left:has(.dt-entry),
+  .dt-cell--right:has(.dt-entry) {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    order: 1;
+  }
+
+  /* Column headers: hide left label, show only right label (now "Expeditions") */
+  .dt-col-header--left { display: none; }
+  .dt-col-header--right {
+    flex: 1;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  /* Today row — dot sits on the spine, date flows right */
+  .dt-now-label { display: none; }
+  .dt-now-center {
+    flex: 0 0 24px;
+    order: 0;
+    justify-content: center;
+  }
+  .dt-now-date {
+    padding-left: 0;
+    order: 1;
+    align-self: center;
+  }
+
+  /* Year badges: left-align with the spine */
+  .dt-year-row { justify-content: flex-start; padding-left: 36px; }
+
+  /* Photos: full-width, consistent height, no cropping distortion */
+  .dt-route-photo {
+    max-width: 100%;
+    width: 100%;
+  }
+  .dt-route-photo img {
+    width: 100%;
+    height: 200px;
+    max-height: none;
+    object-fit: cover;
+  }
+
+  /* Hero */
+  .expedition-hero-inner { padding: 40px 24px; }
+  .expedition-title { font-size: 44px; }
 }
 
 /* ── Footer ── */
