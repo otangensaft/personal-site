@@ -1199,6 +1199,498 @@ h1 em {
   display: block;
 }
 
+/* ── Books & Essays page ── */
+.books-hero {
+  background: #101010;
+  border-bottom: 1px solid #2E2E2E;
+}
+
+.books-hero-inner {
+  padding: 56px;
+  max-width: 980px;
+}
+
+.books-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.05;
+  color: #F4F4F4;
+  margin-bottom: 12px;
+}
+
+.books-subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.14em;
+  line-height: 1.8;
+  text-transform: uppercase;
+  color: #9A9A9A;
+  max-width: 640px;
+}
+
+.books-layout-wrap {
+  background: #F7F7F7;
+  border-bottom: none;
+}
+
+.books-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.45fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.books-timeline-pane {
+  border-right: 1px solid #D8D8D8;
+  padding-right: 20px;
+}
+
+.books-reference-pane {
+  display: grid;
+  gap: 20px;
+}
+
+.books-category {
+  border: 1px solid #D4D4D4;
+  background: #FFFFFF;
+  padding: 22px;
+}
+
+.books-intro {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 200;
+  letter-spacing: 0.11em;
+  line-height: 1.9;
+  color: #5C5C5C;
+  margin-bottom: 24px;
+  max-width: 740px;
+}
+
+.season-continuum {
+  border: 1px solid #D6D6D6;
+  background: #FFFFFF;
+}
+
+.season-continuum-head {
+  display: block;
+  padding: 12px 14px;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.season-continuum-head span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #737373;
+}
+
+.season-rows {
+  display: grid;
+  gap: 2px;
+}
+
+.season-row {
+  position: relative;
+  display: block;
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: background 0.18s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.season-row:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.season-row--link {
+  cursor: pointer;
+}
+
+.season-row--link:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.season-row--button {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  appearance: none;
+}
+
+.season-row--button:focus-visible {
+  outline: 1px solid #9eaec7;
+  outline-offset: 1px;
+}
+
+.season-icon {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 7px;
+  font-weight: 300;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #8C8C8C;
+}
+
+.season-detail {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  align-items: start;
+  column-gap: 10px;
+  padding: 4px 0;
+}
+
+.season-badge {
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+  align-content: start;
+  margin-top: 2px;
+}
+
+.season-age {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 7px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #878787;
+  white-space: nowrap;
+}
+
+.season-text {
+  display: grid;
+  gap: 4px;
+}
+
+.season-row--spring .season-detail {
+  box-shadow: inset 2px 0 0 #CFE4D0;
+  padding-left: 10px;
+}
+
+.season-row--summer .season-detail {
+  box-shadow: inset 2px 0 0 #E8DEB7;
+  padding-left: 10px;
+}
+
+.season-row--fall .season-detail {
+  box-shadow: inset 2px 0 0 #E7CFC1;
+  padding-left: 10px;
+}
+
+.season-row--winter .season-detail {
+  box-shadow: inset 2px 0 0 #C8D8EA;
+  padding-left: 10px;
+}
+
+.season-row.is-current .season-detail {
+  box-shadow: inset 3px 0 0 #8ea0bd;
+}
+
+.season-row.is-current {
+  background: #f7f9fd;
+  border-color: #d6deea;
+  animation: season-current-pulse 4s ease-in-out infinite;
+}
+
+.season-row.is-current::after {
+  content: 'CURRENT';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 7px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7b8ba4;
+}
+
+.season-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #1F1F1F;
+}
+
+.season-meta {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #696969;
+}
+
+.season-essay-link {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px solid #CECECE;
+  width: fit-content;
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.season-essay-link:hover {
+  color: #111111;
+  border-color: #919191;
+}
+
+.season-row--link .season-essay-link {
+  cursor: pointer;
+}
+
+@keyframes season-current-pulse {
+  0%   { background-color: #f7f9fd; }
+  50%  { background-color: #f2f6fc; }
+  100% { background-color: #f7f9fd; }
+}
+
+body.season-modal-open {
+  overflow: hidden;
+}
+
+.season-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 220;
+  display: none;
+}
+
+.season-modal[aria-hidden="false"] {
+  display: block;
+}
+
+.season-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 12, 0.45);
+}
+
+.season-modal-dialog {
+  position: relative;
+  width: min(760px, calc(100% - 36px));
+  max-height: calc(100vh - 56px);
+  overflow-y: auto;
+  margin: 28px auto;
+  border: 1px solid #cfd5df;
+  background: #ffffff;
+  padding: 30px 26px 24px;
+}
+
+.season-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: #5d6674;
+  cursor: pointer;
+}
+
+.season-modal-kicker {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #7a8495;
+  margin-bottom: 10px;
+}
+
+.season-modal-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #1f2530;
+  margin-bottom: 14px;
+}
+
+.season-modal-body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 200;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+  color: #535b68;
+  margin-bottom: 14px;
+}
+
+.season-modal-meta {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #657187;
+  margin-bottom: 16px;
+}
+
+.season-entry {
+  border: 1px solid #d7dde8;
+  padding: 14px 14px 4px;
+  margin-bottom: 14px;
+  background: #fcfdff;
+}
+
+.season-entry:last-of-type {
+  margin-bottom: 0;
+}
+
+.season-entry-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4f5f78;
+  margin-bottom: 10px;
+}
+
+.season-journal-content[hidden] {
+  display: none;
+}
+
+.season-journal-section {
+  margin-bottom: 14px;
+}
+
+.season-journal-section h4 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #51607a;
+  margin-bottom: 7px;
+}
+
+.season-journal-section p,
+.season-journal-section li {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  line-height: 1.75;
+  color: #4a5464;
+}
+
+.season-journal-section ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 5px;
+}
+
+.season-journal-section p {
+  margin: 0;
+}
+
+.open-thread-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.open-thread-chip {
+  border: 1px solid #d6dce8;
+  background: #f9fbff;
+  padding: 9px 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #52607a;
+}
+
+.season-modal-prompt {
+  border: 1px solid #d8dee8;
+  background: #f9fbff;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.season-modal-prompt p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #4e596a;
+}
+
+.reference-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+}
+
+.reference-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 200;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  color: #454545;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 10px;
+}
+
+.reference-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.reference-list li a {
+  color: #2D2D2D;
+  text-decoration: none;
+  border-bottom: 1px solid #CFCFCF;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.reference-list li a:hover {
+  color: #111111;
+  border-color: #8F8F8F;
+}
+
+.reference-item-date {
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #787878;
+  white-space: nowrap;
+}
+
+.reference-list--numbered {
+  list-style: decimal-leading-zero;
+  list-style-position: inside;
+}
+
+.reference-list--numbered li {
+  display: list-item;
+}
+
 /* ── Responsive ── */
 @media (max-width: 700px) {
   .road-epic-layout {
@@ -1288,6 +1780,47 @@ h1 em {
   /* Hero */
   .expedition-hero-inner { padding: 40px 24px; }
   .expedition-title { font-size: 44px; }
+  .books-title { font-size: 40px; }
+  .books-hero-inner { padding: 40px 24px; }
+  .books-layout-wrap { padding-top: 40px; }
+  .books-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .books-timeline-pane {
+    border-right: none;
+    border-bottom: 1px solid #D8D8D8;
+    padding-right: 0;
+    padding-bottom: 18px;
+  }
+  .books-category {
+    padding: 18px;
+  }
+  .reference-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .season-continuum-head,
+  .season-row {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .season-detail {
+    grid-template-columns: 20px minmax(0, 1fr);
+    column-gap: 8px;
+  }
+  .season-modal-dialog {
+    margin: 18px auto;
+    width: calc(100% - 20px);
+    padding: 22px 16px 18px;
+  }
+  .season-modal-title {
+    font-size: 28px;
+  }
+  .open-thread-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Footer ── */

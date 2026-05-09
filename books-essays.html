@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books &amp; Essays | Danny Tang</title>
+  <meta name="description" content="Essays by topic, weekly writing, and favorite books and principles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="books-page">
+  <nav>
+    <a href="index.html" class="nav-logo">Danny Tang 唐丹尼</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#seasonal-writing">Seasonal Writing</a>
+      <a href="#essays">Essays</a>
+      <a href="#favorite-books">Books &amp; Principles</a>
+      <a href="expeditions.html">Expeditions</a>
+      <a href="engineering.html">Engineering</a>
+    </div>
+  </nav>
+
+  <section class="books-hero">
+    <div class="books-hero-inner">
+      <h1 class="books-title">Books &amp; Essays</h1>
+      <p class="books-subtitle">A Home for Deeper Thoughts</p>
+    </div>
+  </section>
+
+  <main class="section-wrap books-layout-wrap">
+    <div class="books-layout">
+      <section class="books-timeline-pane" id="seasonal-writing">
+        <div class="section-head">
+          <span class="section-num">I</span>
+          <span class="section-title">Seasons</span>
+        </div>
+        <div class="season-continuum">
+          <div class="season-continuum-head">
+            <span>Season Continuum</span>
+          </div>
+          <div class="season-rows" id="season-rows"></div>
+        </div>
+      </section>
+
+      <div class="books-reference-pane">
+        <section class="books-category" id="essays">
+          <div class="section-head">
+            <span class="section-num">II</span>
+            <span class="section-title">Essays</span>
+          </div>
+          <ul class="reference-list reference-list--dated">
+            <li><a href="#">The Value of Time</a><span class="reference-item-date">Read May 2026</span></li>
+            <li><a href="#">Who You Work With</a><span class="reference-item-date">Read Apr 2026</span></li>
+            <li><a href="#">What is there to do?</a><span class="reference-item-date">Read Mar 2026</span></li>
+          </ul>
+        </section>
+
+        <section class="books-category" id="favorite-books">
+          <div class="section-head">
+            <span class="section-num">III</span>
+            <span class="section-title">Favorite Books</span>
+          </div>
+          <ul class="reference-list reference-list--dated">
+            <li>Not Fade Away</li>
+            <li>Shoe Dog</li>
+            <li>Sapiens</li>
+            <li>When Breath Becomes Air</li>
+            <li>Tuesdays with Morrie</li>
+            <li>The Alchemist</li>
+            <li>Let My People Go Surfing</li>
+          </ul>
+        </section>
+
+        <section class="books-category" id="principles">
+          <div class="section-head">
+            <span class="section-num">IV</span>
+            <span class="section-title">Principles</span>
+          </div>
+          <ol class="reference-list reference-list--numbered">
+            <li>put first things first</li>
+            <li>keep separate things separate</li>
+            <li>be honest with yourself and others</li>
+            <li>start with clarity</li>
+          </ol>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="season-modal" id="spring-2026-modal" aria-hidden="true">
+    <div class="season-modal-backdrop" data-modal-close></div>
+    <div class="season-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="spring-2026-title">
+      <button type="button" class="season-modal-close" data-modal-close aria-label="Close seasonal writing popup">×</button>
+      <p class="season-modal-kicker">Spring 2026</p>
+      <h2 id="spring-2026-title" class="season-modal-title">Spring 2026 Journal</h2>
+      <p class="season-modal-meta">Journal entries</p>
+
+      <div class="season-journal-content" id="spring-2026-content" aria-hidden="true" hidden>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-col">
+        <p class="footer-col-label">Navigation</p>
+        <a href="#seasonal-writing">Seasonal Writing</a>
+        <a href="#essays">Essays</a>
+        <a href="#favorite-books">Favorite Books</a>
+        <a href="#principles">Principles</a>
+        <a href="index.html">Home</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Contact</p>
+        <a href="mailto:tang_daniel@outlook.com">tang_daniel@outlook.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 danny Tang</span>
+      <span class="footer-mark">Est. MMXCII</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const seasonRows = document.getElementById("season-rows");
+      if (!seasonRows) return;
+      const body = document.body;
+
+      const birthDate = new Date("1998-02-27T00:00:00");
+      const now = new Date();
+      const month = now.getMonth();
+      const currentYear = now.getFullYear();
+      const birthYear = birthDate.getFullYear();
+      const birthMonth = birthDate.getMonth();
+      const birthDay = birthDate.getDate();
+      let season = "winter";
+
+      if (month >= 2 && month <= 4) season = "spring";
+      else if (month >= 5 && month <= 7) season = "summer";
+      else if (month >= 8 && month <= 10) season = "fall";
+
+      const seasons = [
+        { key: "winter", label: "Winter", range: "Dec - Feb", icon: "WI", startMonth: 11 },
+        { key: "fall", label: "Fall", range: "Sep - Nov", icon: "FA", startMonth: 8 },
+        { key: "summer", label: "Summer", range: "Jun - Aug", icon: "SU", startMonth: 5 },
+        { key: "spring", label: "Spring", range: "Mar - May", icon: "SP", startMonth: 2 }
+      ];
+
+      const openModal = (modal) => {
+        modal.setAttribute("aria-hidden", "false");
+        body.classList.add("season-modal-open");
+      };
+
+      const closeModal = (modal) => {
+        modal.setAttribute("aria-hidden", "true");
+        body.classList.remove("season-modal-open");
+      };
+
+      const setJournalVisibility = (visible) => {
+        const content = document.getElementById("spring-2026-content");
+        if (!content) return;
+        content.hidden = !visible;
+        content.setAttribute("aria-hidden", visible ? "false" : "true");
+      };
+
+      const renderJournalEntries = (entries) => {
+        const container = document.getElementById("spring-2026-content");
+        if (!container) return;
+        container.innerHTML = "";
+
+        entries.forEach((entry) => {
+          const article = document.createElement("article");
+          article.className = "season-entry";
+
+          const title = document.createElement("h3");
+          title.className = "season-entry-title";
+          title.textContent = `${entry.date} · ${entry.location}`;
+          article.appendChild(title);
+
+          entry.sections.forEach((section) => {
+            const sectionEl = document.createElement("div");
+            sectionEl.className = "season-journal-section";
+
+            const heading = document.createElement("h4");
+            heading.textContent = section.title;
+            sectionEl.appendChild(heading);
+
+            if (section.body) {
+              const paragraph = document.createElement("p");
+              paragraph.textContent = section.body;
+              sectionEl.appendChild(paragraph);
+            }
+
+            if (section.bullets && section.bullets.length) {
+              const chipSections = new Set(["Open Threads", "Books to Bring to Italy"]);
+              if (chipSections.has(section.title)) {
+                const threadGrid = document.createElement("div");
+                threadGrid.className = "open-thread-grid";
+                section.bullets.forEach((bullet) => {
+                  const chip = document.createElement("div");
+                  chip.className = "open-thread-chip";
+                  chip.textContent = bullet;
+                  threadGrid.appendChild(chip);
+                });
+                sectionEl.appendChild(threadGrid);
+              } else {
+                const list = document.createElement("ul");
+                section.bullets.forEach((bullet) => {
+                  const item = document.createElement("li");
+                  item.innerHTML = bullet;
+                  list.appendChild(item);
+                });
+                sectionEl.appendChild(list);
+              }
+            }
+
+            article.appendChild(sectionEl);
+          });
+
+          container.appendChild(article);
+        });
+      };
+
+      const loadSpringJournal = async () => {
+        try {
+          const response = await fetch("/api/journal/spring-2026", { credentials: "same-origin" });
+          if (!response.ok) {
+            renderJournalEntries([]);
+            setJournalVisibility(false);
+            return false;
+          }
+          const payload = await response.json();
+          renderJournalEntries(payload.entries || []);
+          setJournalVisibility(true);
+          return true;
+        } catch (_error) {
+          setJournalVisibility(false);
+          return false;
+        }
+      };
+
+      const ageAtSeasonStart = (year, startMonth) => {
+        let age = year - birthYear;
+        if (startMonth < birthMonth || (startMonth === birthMonth && 1 < birthDay)) {
+          age -= 1;
+        }
+        return age;
+      };
+
+      const essayLinks = {
+        "2026-spring": { modalId: "spring-2026-modal" }
+      };
+
+      for (let year = currentYear; year >= birthYear; year -= 1) {
+        seasons.forEach((seasonInfo) => {
+          const essayKey = `${year}-${seasonInfo.key}`;
+          const essay = essayLinks[essayKey];
+          const row = document.createElement(essay ? "button" : "article");
+          row.className = `season-row season-row--${seasonInfo.key}`;
+          row.dataset.season = seasonInfo.key;
+          row.dataset.year = String(year);
+          if (essay) {
+            row.classList.add("season-row--link");
+            row.classList.add("season-row--button");
+            row.type = "button";
+            row.dataset.modalId = essay.modalId;
+            row.setAttribute("aria-haspopup", "dialog");
+            row.addEventListener("click", (event) => {
+              event.preventDefault();
+              const modal = document.getElementById(essay.modalId);
+              if (modal) openModal(modal);
+            });
+          }
+
+          const age = year === birthYear
+            ? "0"
+            : String(ageAtSeasonStart(year, seasonInfo.startMonth));
+
+          const seasonDetail = document.createElement("div");
+          seasonDetail.className = "season-detail";
+
+          const seasonBadge = document.createElement("div");
+          seasonBadge.className = "season-badge";
+
+          const seasonIcon = document.createElement("span");
+          seasonIcon.className = "season-icon";
+          seasonIcon.textContent = seasonInfo.icon;
+
+          const seasonAge = document.createElement("span");
+          seasonAge.className = "season-age";
+          seasonAge.textContent = age;
+
+          const seasonText = document.createElement("div");
+          seasonText.className = "season-text";
+
+          const seasonName = document.createElement("p");
+          seasonName.className = "season-name";
+          seasonName.textContent = seasonInfo.label;
+
+          const seasonMeta = document.createElement("p");
+          seasonMeta.className = "season-meta";
+          seasonMeta.textContent = `${seasonInfo.range} · ${year}`;
+
+          seasonBadge.appendChild(seasonIcon);
+          seasonBadge.appendChild(seasonAge);
+          seasonText.appendChild(seasonName);
+          seasonText.appendChild(seasonMeta);
+          seasonDetail.appendChild(seasonBadge);
+          seasonDetail.appendChild(seasonText);
+
+          row.appendChild(seasonDetail);
+          seasonRows.appendChild(row);
+        });
+      }
+
+      const selector = `.season-row[data-year="${String(currentYear)}"][data-season="${season}"]`;
+      const currentRow = document.querySelector(selector);
+      if (currentRow) currentRow.classList.add("is-current");
+      setJournalVisibility(false);
+
+      seasonRows.addEventListener("click", (event) => {
+        const trigger = event.target.closest(".season-row--button[data-modal-id]");
+        if (!trigger) return;
+        event.preventDefault();
+        const modal = document.getElementById(trigger.dataset.modalId);
+        if (modal) {
+          openModal(modal);
+          loadSpringJournal();
+        }
+      });
+
+      document.querySelectorAll(".season-modal").forEach((modal) => {
+        modal.addEventListener("click", (event) => {
+          if (event.target.matches("[data-modal-close]")) closeModal(modal);
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape") return;
+        document.querySelectorAll('.season-modal[aria-hidden="false"]').forEach((modal) => {
+          closeModal(modal);
+        });
+      });
+    })();
+  </script>
+  <script src="nav.js"></script>
+</body>
+</html>
