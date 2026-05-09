@@ -101,6 +101,13 @@
       <h2 id="spring-2026-title" class="season-modal-title">Spring 2026 Journal</h2>
       <p class="season-modal-meta">Journal entries</p>
 
+      <div class="season-modal-corner" aria-label="Books to bring to Italy">
+        <p class="season-modal-corner-label">Books</p>
+        <ul class="season-modal-corner-list" id="spring-books-list"></ul>
+        <p class="season-modal-corner-label season-modal-corner-label--spaced">Goals</p>
+        <ul class="season-modal-corner-list" id="spring-goals-list"></ul>
+      </div>
+
       <div class="season-journal-content" id="spring-2026-content" aria-hidden="true" hidden>
       </div>
 
@@ -197,10 +204,6 @@
               ]
             },
             {
-              title: "Books to Bring to Italy",
-              bullets: ["Almanac of Naval Ravikant", "Influence", "TBD"]
-            },
-            {
               title: "Open Threads",
               bullets: ["Transportation", "Aviation", "Masters Degree", "Mortgage", "Languages", "Fitness", "Italy prep", "Outreach"]
             },
@@ -214,43 +217,33 @@
               ]
             }
           ]
-        },
-        {
-          date: "Apr 26, 2026",
-          location: "Home Office · Santa Barbara",
-          sections: [
-            {
-              title: "Weekly Reflection",
-              body: "This week felt more stable. I am learning that consistency beats intensity, especially when balancing work execution and long-term planning."
-            },
-            {
-              title: "Focus for Next Week",
-              bullets: [
-                "Protect two focused work blocks each day.",
-                "Run three times and keep recovery simple.",
-                "Refine the lead growth plan with clear owners."
-              ]
-            }
-          ]
-        },
-        {
-          date: "Apr 12, 2026",
-          location: "Downtown Walk · Santa Barbara",
-          sections: [
-            {
-              title: "Weekly Reflection",
-              body: "I have more clarity when I simplify the week before it starts. Less context-switching means better energy and better decisions."
-            },
-            {
-              title: "Open Questions",
-              bullets: [
-                "What does the next 90 days need from me personally?",
-                "What work should I stop doing to protect leverage?"
-              ]
-            }
-          ]
         }
       ];
+
+      const springBooks = ["Almanac of Naval Ravikant", "Influence", "TBD"];
+      const springGoals = ["$80K ACV", "100% YoY Growth", "7 Fun Things"];
+
+      const renderBooksToBring = () => {
+        const list = document.getElementById("spring-books-list");
+        if (!list) return;
+        list.innerHTML = "";
+        springBooks.forEach((book) => {
+          const item = document.createElement("li");
+          item.textContent = book;
+          list.appendChild(item);
+        });
+      };
+
+      const renderGoals = () => {
+        const list = document.getElementById("spring-goals-list");
+        if (!list) return;
+        list.innerHTML = "";
+        springGoals.forEach((goal) => {
+          const item = document.createElement("li");
+          item.textContent = goal;
+          list.appendChild(item);
+        });
+      };
 
       const renderJournalEntries = (entries) => {
         const container = document.getElementById("spring-2026-content");
@@ -281,7 +274,7 @@
             }
 
             if (section.bullets && section.bullets.length) {
-              const chipSections = new Set(["Open Threads", "Books to Bring to Italy"]);
+              const chipSections = new Set(["Open Threads"]);
               if (chipSections.has(section.title)) {
                 const threadGrid = document.createElement("div");
                 threadGrid.className = "open-thread-grid";
@@ -392,6 +385,8 @@
       const selector = `.season-row[data-year="${String(currentYear)}"][data-season="${season}"]`;
       const currentRow = document.querySelector(selector);
       if (currentRow) currentRow.classList.add("is-current");
+      renderBooksToBring();
+      renderGoals();
       setJournalVisibility(false);
 
       seasonRows.addEventListener("click", (event) => {

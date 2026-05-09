@@ -1486,7 +1486,7 @@ body.season-modal-open {
   margin: 28px auto;
   border: 1px solid #cfd5df;
   background: #ffffff;
-  padding: 30px 26px 24px;
+  padding: 30px 250px 24px 26px;
 }
 
 .season-modal-close {
@@ -1537,6 +1537,48 @@ body.season-modal-open {
   text-transform: uppercase;
   color: #657187;
   margin-bottom: 16px;
+}
+
+.season-modal-corner {
+  position: absolute;
+  top: 56px;
+  right: 20px;
+  width: 206px;
+  padding: 0;
+}
+
+.season-modal-corner-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 7px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #687792;
+  margin-bottom: 6px;
+}
+
+.season-modal-corner-label--spaced {
+  margin-top: 12px;
+}
+
+.season-modal-corner-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.season-modal-corner-list li {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #4f5c73;
+}
+
+.season-modal-dialog .open-thread-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .season-entry {
@@ -1817,6 +1859,11 @@ body.season-modal-open {
   }
   .season-modal-title {
     font-size: 28px;
+  }
+  .season-modal-corner {
+    position: static;
+    width: 100%;
+    margin-bottom: 12px;
   }
   .open-thread-grid {
     grid-template-columns: 1fr;
